@@ -1,8 +1,9 @@
 const { google } = require('googleapis');
 
 const authConfig = async () => {
+
   const auth = new google.auth.GoogleAuth({
-    keyFile: 'config/credentials.json',
+    keyFile: process.env.CREDENTIALS_PATH,
     scopes: 'https://www.googleapis.com/auth/spreadsheets'
   });
 
