@@ -69,7 +69,7 @@ router.post('/fetch-sheet', async (req, res) => {
     return res.json(JSONResponse);
   } catch (err) {
     console.error('Error fetching sheet data:', err);
-    return res.status(500).json({ error: 'Failed to fetch sheet data' });
+    return res.status(500).json(err);
   }
 });
 
